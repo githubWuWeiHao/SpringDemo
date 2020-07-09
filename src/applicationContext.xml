@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+<bean id="huawei" class="com.company.spring.Phone">
+<property name="brand" value="华为"></property>
+<property name="price" value="5000"></property>
+</bean>
+
+<bean id="zhao" class="com.company.spring.Person">
+<property name="id" value="1001"></property>
+<property name="pname" value="赵欣欣"></property>
+<property name="phone" ref="huawei"></property>
+
+</bean>
+<bean id="decimalUtil" class="com.company.spring.DecimalUtil">
+
+</bean>
+<context:component-scan base-package="com.company"></context:component-scan>
+</beans>
